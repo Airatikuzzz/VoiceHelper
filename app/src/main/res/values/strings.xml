@@ -1,11 +1,22 @@
 <resources>
-    <string name="app_name">Voice Helper</string>
+    <string name="app_name">Игры с животными</string>
     <string name="action_settings">Settings</string>
-    <string name="title_1">Cool card</string>
-    <string name="title_2">Ok card</string>
+    <string name="title_1">Найди животное</string>
+    <string name="title_2">Найди по звуку</string>
     <string name="title_3">Bad card</string>
     <string name="title_4">Ugly card</string>
 
+    <string name="text1">Если ты узнаешь животное по фотографии, нажми на кнопку микрофона и проговори вслух</string>
+    <string name="text2">Ты услышишь звук животного, попробуй определить его из четырех предложенных фотографий</string>
     <string name="text_1">Lorem ipsum dolor sit amet, consectetur adipiscing elit.  Etiam eget ligula eu lectus lobortis condimentum.</string>
+    <string name="btnTextStart">Начать</string>
+    <string name="title_activity_one_image">OneImageActivity</string>
+    <string name="whatisanimal">Угадай животное</string>
+    <string name="animal1">медведь</string>
+    <string name="select_game">Выбери игру</string>
+    <string name="title_activity_quartet">QuartetActivity</string>
+    <string name="quartet_game">Угадай животное по звуку</string>
+    <string name="settings">Настройки</string>
+    <string name="google_play">Оценить</string>
 
 </resources>

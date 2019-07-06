@@ -1,0 +1,61 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.appcompat.widget.LinearLayoutCompat
+    xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:id="@+id/content_one_image"
+    android:visibility="invisible"
+    app:layout_behavior="@string/appbar_scrolling_view_behavior"
+    tools:context=".OneImageActivity"
+    tools:showIn="@layout/activity_one_image"
+    android:orientation="vertical"
+    android:background="#b085f5"
+    >
+
+<com.google.android.material.card.MaterialCardView
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:layout_weight="1"
+    >
+    <ImageView
+        android:id="@+id/one_activity_image_view"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:scaleType="fitCenter"/>
+</com.google.android.material.card.MaterialCardView>
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:layout_weight="2.5"
+        android:layout_margin="@dimen/margin_linear">
+    <com.google.android.material.chip.ChipGroup
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        app:singleLine="true"
+        >
+        <com.google.android.material.chip.Chip
+            android:id="@+id/chip1"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            style="@style/Widget.MaterialComponents.Chip.Action"
+            android:textAlignment="center"
+            app:closeIcon="@drawable/ic_music"
+            app:closeIconSize="@dimen/fab_margin"
+            app:closeIconEnabled="true"
+            />
+        <com.google.android.material.chip.Chip
+            android:id="@+id/chip2"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            style="@style/Widget.MaterialComponents.Chip.Action"
+            android:textAlignment="center"
+            app:closeIcon="@drawable/ic_music"
+            app:closeIconSize="@dimen/fab_margin"
+            app:closeIconEnabled="true"
+            />
+    </com.google.android.material.chip.ChipGroup>
+    </LinearLayout>
+</androidx.appcompat.widget.LinearLayoutCompat>

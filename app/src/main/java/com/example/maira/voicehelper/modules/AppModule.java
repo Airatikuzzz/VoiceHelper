@@ -1,7 +1,7 @@
 package com.example.maira.voicehelper.modules;
 
 import android.content.Context;
-import android.support.annotation.NonNull;
+import androidx.annotation.NonNull;
 
 import javax.inject.Singleton;
 
@@ -24,4 +24,6 @@ public class AppModule {
     Context provideContext(){
         return mContext;
     }
+
+
 }

@@ -8,10 +8,12 @@ public class CardItem {
 
     private int mTextResource;
     private int mTitleResource;
+    private int mIconResource;
 
-    public CardItem(int title, int text) {
+    public CardItem(int title, int text, int icon) {
         mTitleResource = title;
         mTextResource = text;
+        mIconResource = icon;
     }
 
     public int getText() {
@@ -20,5 +22,8 @@ public class CardItem {
 
     public int getTitle() {
         return mTitleResource;
+    }
+    public int getIcon() {
+        return mIconResource;
     }
 }

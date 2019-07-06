@@ -1,6 +1,9 @@
 package com.example.maira.voicehelper.modules;
 
 
+import android.content.Context;
+
+import com.example.maira.voicehelper.repository.Repository;
 import com.example.maira.voicehelper.storage.StorageUtils;
 
 import javax.inject.Singleton;
@@ -15,7 +18,7 @@ import dagger.Provides;
 public class StorageModule {
     @Provides
     @Singleton
-    StorageUtils provideStorageUtils(){
-        return new StorageUtils();
+    StorageUtils provideStorageUtils(Repository repository, Context context){
+        return new StorageUtils(repository, context);
     }
 }

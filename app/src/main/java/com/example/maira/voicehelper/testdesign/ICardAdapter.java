@@ -3,7 +3,7 @@ package com.example.maira.voicehelper.testdesign;
 /**
  * Created by maira on 05.01.2019.
  */
-import android.support.v7.widget.CardView;
+import androidx.cardview.widget.CardView;
 
 public interface ICardAdapter {
 

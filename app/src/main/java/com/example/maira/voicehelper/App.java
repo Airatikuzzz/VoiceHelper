@@ -13,7 +13,7 @@ import com.example.maira.voicehelper.modules.AppModule;
 public class App extends Application {
     private static AppComponent component;
 
-    @Override
+   @Override
     public void onCreate() {
         super.onCreate();
         component = DaggerAppComponent.builder()

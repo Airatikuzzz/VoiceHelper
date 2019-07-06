@@ -1,41 +1,43 @@
 package com.example.maira.voicehelper;
 
-import android.support.v4.app.NavUtils;
-import android.support.v7.app.AppCompatActivity;
+import android.content.Intent;
+
+import androidx.appcompat.widget.Toolbar;
+import androidx.core.app.NavUtils;
+import androidx.appcompat.app.AppCompatActivity;
 import android.os.Bundle;
 
-import android.content.Context;
-import android.support.v4.view.ViewPager;
+import androidx.viewpager.widget.ViewPager;
 import android.view.MenuItem;
-import android.view.View;
 import android.widget.Button;
-import android.widget.CompoundButton;
 
 import com.example.maira.voicehelper.testdesign.CardItem;
 import com.example.maira.voicehelper.testdesign.CardPagerAdapter;
 import com.example.maira.voicehelper.testdesign.ShadowTransformer;
 
-public class TestActivity extends AppCompatActivity {
+import butterknife.BindView;
+import butterknife.ButterKnife;
+import butterknife.OnClick;
+
+public class TestActivity extends AppCompatActivity  {
 
     private ViewPager mViewPager;
 
     private CardPagerAdapter mCardAdapter;
     private ShadowTransformer mCardShadowTransformer;
 
-    private boolean mShowingFragments = false;
-
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_test);
-        mViewPager = (ViewPager) findViewById(R.id.viewPager);
 
+        mViewPager = findViewById(R.id.viewPager);
 
         mCardAdapter = new CardPagerAdapter();
-        mCardAdapter.addCardItem(new CardItem(R.string.title_1, R.string.text_1));
-        mCardAdapter.addCardItem(new CardItem(R.string.title_2, R.string.text_1));
-        mCardAdapter.addCardItem(new CardItem(R.string.title_3, R.string.text_1));
-        mCardAdapter.addCardItem(new CardItem(R.string.title_4, R.string.text_1));
+        mCardAdapter.addCardItem(new CardItem(R.string.title_1, R.string.text1,R.drawable.ic_cat));
+        mCardAdapter.addCardItem(new CardItem(R.string.title_2, R.string.text2, R.drawable.ic_library_music));
+        //mCardAdapter.addCardItem(new CardItem(R.string.title_3, R.string.text_1));
+        //mCardAdapter.addCardItem(new CardItem(R.string.title_4, R.string.text_1));
 
         mCardShadowTransformer = new ShadowTransformer(mViewPager, mCardAdapter);
         mCardShadowTransformer.enableScaling(true);
@@ -61,5 +63,11 @@ public class TestActivity extends AppCompatActivity {
                 return true;
         }
         return super.onOptionsItemSelected(item);
+    }
+
+    @Override
+    public boolean onSupportNavigateUp() {
+        finish();
+        return true;
     }
 }

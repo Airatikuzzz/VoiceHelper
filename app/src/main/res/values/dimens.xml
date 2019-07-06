@@ -1,5 +1,8 @@
 <resources>
-    <dimen name="fab_margin">16dp</dimen>
+    <dimen name="fab_margin">28dp</dimen>
     <dimen name="card_padding">60dp</dimen>
+    <dimen name="margin_linear">20dp</dimen>
+    <dimen name="margin_chips">3dp</dimen>
+
 
 </resources>
